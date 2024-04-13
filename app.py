@@ -142,7 +142,7 @@ def Carousel_Template(results):
 
 @app.route("/file/<name>", methods=['GET'])
 def sendFile(name):
-    return send_from_directory('/tmp/', f'{name}.mp3')
+    return send_from_directory('/tmp/', f'{name}')
 
 
 @handler.add(PostbackEvent)
