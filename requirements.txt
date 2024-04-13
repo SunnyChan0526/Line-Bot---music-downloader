@@ -1,4 +1,4 @@
-line-bot-sdk
+line-bot-sdk==3.10.2
 flask
 BeautifulSoup4
 requests
