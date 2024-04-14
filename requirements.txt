@@ -2,6 +2,6 @@ line-bot-sdk
 flask
 BeautifulSoup4
 requests
-youtube-dl
+yt_dlp
 youtube-search
 gunicorn
