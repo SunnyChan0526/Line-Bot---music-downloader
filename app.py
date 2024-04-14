@@ -184,7 +184,7 @@ def handle_message(event):
         SongsList.clear()
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text='removed'))
     if (inputs == 'remove one'):
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='Which one would you remove?(0~...)'))
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='Which one would you like to remove?(0~...)'))
     if inputs.isnumeric():
         SongsList.pop(int(inputs))
         line_bot_api.reply_message(event.reply_token, TextSendMessage(text="\n".join(show_list())))
