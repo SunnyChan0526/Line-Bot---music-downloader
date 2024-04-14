@@ -1,7 +1,8 @@
 from __future__ import unicode_literals
+# import youtube_dl
 import yt_dlp as youtube_dl
-from youtube_search import YoutubeSearch 
-import uuid 
+from youtube_search import YoutubeSearch
+import uuid
 
 from flask import Flask, request, abort, send_from_directory
 
@@ -26,7 +27,6 @@ def download(music_url):
     ydl_opts = {
         'format': 'bestaudio/best',
         'outtmpl' : f'/tmp/{name}.mp3',
-        # 'outtmpl': f'/tmp/{name}.%(ext)s', # avoid ".mp3.mp3"
         'postprocessors': [{
             'key': 'FFmpegExtractAudio',
             'preferredcodec': 'mp3',
