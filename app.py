@@ -32,7 +32,7 @@ def download(music_url):
             'preferredcodec': 'mp3',
             'preferredquality': '192',
         }],
-        'forceip':'4',
+        'source_address': '0.0.0.0',
     }
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
         ydl.download([music_url])
