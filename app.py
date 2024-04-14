@@ -25,8 +25,8 @@ def download(music_url):
     name = str(uuid.uuid4())
     ydl_opts = {
         'format': 'bestaudio/best',
-        # 'outtmpl' : f'/tmp/{name}.mp3',
-        'outtmpl': f'/tmp/{name}.%(ext)s', # avoid ".mp3.mp3"
+        'outtmpl' : f'/tmp/{name}.mp3',
+        # 'outtmpl': f'/tmp/{name}.%(ext)s', # avoid ".mp3.mp3"
         'postprocessors': [{
             'key': 'FFmpegExtractAudio',
             'preferredcodec': 'mp3',
@@ -143,7 +143,7 @@ def Carousel_Template(results):
 
 @app.route("/file/<name>", methods=['GET'])
 def sendFile(name):
-    return send_from_directory('/tmp/', f'{name}')
+    return send_from_directory('/tmp/', f'{name}.mp3')
 
 
 @handler.add(PostbackEvent)
